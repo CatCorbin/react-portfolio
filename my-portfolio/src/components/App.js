@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Header
-        developerName="Your Name"
+        developerName="Cat Corbin"
         sections={sections}
         currentSection={currentSection}
         onSectionChange={handleSectionChange}

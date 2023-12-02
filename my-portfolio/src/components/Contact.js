@@ -25,14 +25,13 @@ const Contact = () => {
 
       if (response.ok) {
         console.log('Form submitted successfully');
-        // You can reset the form or show a success message here
+        // todo add success message
       } else {
         console.error('Form submission failed');
-        // Handle the error, show an error message, etc.
+        // add retry message
       }
     } catch (error) {
       console.error('An error occurred:', error);
-      // Handle the error, show an error message, etc.
     }
   };
 
