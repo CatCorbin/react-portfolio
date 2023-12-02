@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+  const [currentSection, setCurrentSection] = useState('About Me');
+
+  const sections = ['About Me', 'Portfolio', 'Contact', 'Resume'];
+
+  const handleSectionChange = (section) => {
+    setCurrentSection(section);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header
+        developerName="Your Name"
+        sections={sections}
+        currentSection={currentSection}
+        onSectionChange={handleSectionChange}
+      />
+
+      <main>
+        {currentSection === 'About Me' && <AboutMe />}
+        {currentSection === 'Portfolio' && <Portfolio />}
+        {currentSection === 'Contact' && <Contact />}
+        {currentSection === 'Resume' && <Resume />}
+      </main>
+
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
