@@ -18,6 +18,13 @@ button {
   cursor: pointer;
 }
 
+.portfolio-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

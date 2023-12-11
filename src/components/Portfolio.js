@@ -59,7 +59,7 @@ const Portfolio = () => {
         <div key={index}>
           <h3>{project.title}</h3>
           <p>{project.description}</p>
-          <img src={project.imageSrc} alt={`${project.title} Screenshot`} />
+          <img src={project.imageSrc} alt={`${project.title} Screenshot`} className="portfolio-image"/>
           <p>
             Deployed Link:{' '}
             <a href={project.deployedLink} target="_blank" rel="noopener noreferrer">
